@@ -1,0 +1,39 @@
+########################
+# NODE
+########################
+
+node_modules
+npm-debug.log
+**/logs/**
+
+
+########################
+# misc / editors
+########################
+
+*~
+*#
+**/.DS_STORE/**
+**/.netbeans/**
+**/nbproject/**
+**/.idea/**
+**/tracegl.js/**
+**/sftp-config.json/**
+**/tmp/**
+
+########################
+# docs / tests
+########################
+doc
+apidoc
+**/test/suites/local**
+**.file
+report.xml
+
+########################
+# local config
+########################
+**/config/env/**
+.jenkins.conf
+**.ac-credentials**
+**.pem
