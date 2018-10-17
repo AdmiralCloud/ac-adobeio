@@ -27,6 +27,10 @@ const acAdobeIO = () => {
     if (_.get(params, 'product')) product = _.get(params, 'product')
   }
 
+  const getJWT = () => {
+    return jwtToken
+  }
+
   const requestJWT = (cb) => {
     // check if JWT is still valid
     if (_.get(jwtToken, 'expires') > moment().unix()) {
@@ -187,6 +191,7 @@ files:
 
   return {
     init,
+    getJWT,
     requestJWT,
     profile,
     license,
