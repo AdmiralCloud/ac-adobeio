@@ -118,6 +118,11 @@ const acAdobeIO = () => {
 
   /**
    * Returns the license history for the given user
+   * https://www.adobe.io/apis/creativecloud/stock/docs.html#!adobe/stock-api-docs/master/docs/api/13-license-history.md
+   *
+   * @param params.locale
+   * @param params.offset
+   * @param params.limit
    *
    * @param {*} cb (err, result)
    *
@@ -140,10 +145,22 @@ files:
     */
 
   const licenseHistory = (params, cb) => {
+    let queryString = []
+    if (_.get(params, 'offset')) {
+      queryString.push('search_parameters[offset]=' + _.get(params, 'offset'))
+    }
+    if (_.get(params, 'limit')) {
+      queryString.push('search_parameters[limit]=' + _.get(params, 'limit'))
+    }
+    if (_.get(params, 'locale')) {
+      queryString.push('locale]=' + _.get(params, 'locale'))
+    }
+
     requestJWT((err) => {
       if (err) return cb(err)
       request
         .get(_.get(config, 'endpoints.licenseHistory'))
+        .query(_.join(queryString, '&'))
         .set({
           'x-api-key': clientId,
           'x-product': product,
