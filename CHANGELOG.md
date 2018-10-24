@@ -1,3 +1,14 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/mmpro/ac-adobeio/compare/v1.0.1...v1.0.2) (2018-10-24 11:02)
+
+
+### Bug Fixes
+
+* **Misc:** LicenseHistory now support offset, limit and locale | MP ([77ec463](https://github.com/mmpro/ac-adobeio/commit/77ec463))    
+  LicenseHistory now support offset, limit and locale
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/mmpro/ac-adobeio/compare/v1.0.0...v1.0.1) (2018-10-17 12:26)
 
