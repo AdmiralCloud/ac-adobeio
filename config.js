@@ -3,6 +3,7 @@ module.exports = {
     license: 'https://stock.adobe.io/Rest/Libraries/1/Content/License',
     licenseHistory: 'https://stock.adobe.io/Rest/Libraries/1/Member/LicenseHistory',
     profile: 'https://stock.adobe.io/Rest/Libraries/1/Member/Profile',
+    info: 'https://stock.adobe.io/Rest/Libraries/1/Content/Info',
     search: 'https://stock.adobe.io/Rest/Media/1/Search/Files',
 
   },

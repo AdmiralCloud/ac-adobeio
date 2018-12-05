@@ -195,13 +195,40 @@ files:
         .set({
           'x-api-key': clientId,
           'x-product': product,
-          'Authorization': 'Bearer ' + params.token
+          'Authorization': 'Bearer ' + _.get(jwtToken, 'access_token')
         })
         .query(payload)
         .end((err, res) => {
-          console.log(33, err, res.body)
-          console.log(35, 'USED', params)
-          return cb()
+          return cb(err, _.get(res, 'body', {}))
+        })
+    })
+  }
+
+    /**
+   * Gets info about the content id
+   * @param params.content_id INT REQUIRED content id to licenses
+   * @param {*} cb (err, result)
+   */
+  const info = (params, cb) => {
+    const contentId = _.get(params, 'contentId')
+    if (!contentId) return cb({ message: 'contentId_required' })
+
+    requestJWT((err) => {
+      if (err) return cb(err)
+
+      const payload = {
+        content_id: contentId,
+      }
+
+      request.get(_.get(config, 'endpoints.info'))
+        .set({
+          'x-api-key': clientId,
+          'x-product': product,
+          'Authorization': 'Bearer ' + _.get(jwtToken, 'access_token')
+        })
+        .query(payload)
+        .end((err, res) => {
+          return cb(err, _.get(res, 'body', {}))
         })
     })
   }
@@ -211,6 +238,7 @@ files:
     getJWT,
     requestJWT,
     profile,
+    info,
     license,
     licenseHistory
   }
