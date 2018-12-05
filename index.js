@@ -204,7 +204,7 @@ files:
     })
   }
 
-    /**
+  /**
    * Gets info about the content id
    * @param params.content_id INT REQUIRED content id to licenses
    * @param {*} cb (err, result)
@@ -217,10 +217,38 @@ files:
       if (err) return cb(err)
 
       const payload = {
-        content_id: contentId,
+        content_id: contentId
       }
 
       request.get(_.get(config, 'endpoints.info'))
+        .set({
+          'x-api-key': clientId,
+          'x-product': product,
+          'Authorization': 'Bearer ' + _.get(jwtToken, 'access_token')
+        })
+        .query(payload)
+        .end((err, res) => {
+          return cb(err, _.get(res, 'body', {}))
+        })
+    })
+  }
+
+  /**
+   * Search Adobe Stock Footage library
+   * @param params.words STRING String to search for
+   * @param {*} cb (err, result) -> { nb_results: 0, files: [] }
+   *
+   * TODO: Add more parameters
+   */
+  const search = (params, cb) => {
+    requestJWT((err) => {
+      if (err) return cb(err)
+
+      const payload = {
+        'search_parameters[words]': params.words
+      }
+
+      request.get(_.get(config, 'endpoints.search'))
         .set({
           'x-api-key': clientId,
           'x-product': product,
@@ -239,6 +267,7 @@ files:
     requestJWT,
     profile,
     info,
+    search,
     license,
     licenseHistory
   }
