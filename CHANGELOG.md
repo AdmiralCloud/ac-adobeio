@@ -1,3 +1,14 @@
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/mmpro/ac-adobeio/compare/v1.0.3...v1.0.4) (2018-12-05 18:46)
+
+
+### Bug Fixes
+
+* **Misc:** Add search | MP ([9315614](https://github.com/mmpro/ac-adobeio/commit/9315614))    
+  Add search (only for words at the moment)
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/mmpro/ac-adobeio/compare/v1.0.2...v1.0.3) (2018-12-05 16:16)
 
