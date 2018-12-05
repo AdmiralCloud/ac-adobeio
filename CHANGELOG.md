@@ -1,3 +1,14 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/mmpro/ac-adobeio/compare/v1.0.2...v1.0.3) (2018-12-05 16:16)
+
+
+### Bug Fixes
+
+* **Misc:** Add info endpoint | MP ([3f2df91](https://github.com/mmpro/ac-adobeio/commit/3f2df91))    
+  Add info endpoint and method
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/mmpro/ac-adobeio/compare/v1.0.1...v1.0.2) (2018-10-24 11:02)
 
