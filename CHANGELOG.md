@@ -1,3 +1,14 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/mmpro/ac-adobeio/compare/v1.0.4...v1.1.0) (2019-06-17 17:44)
+
+
+### Features
+
+* **Misc:** Adobe API Update | Get ALL licenses | PL ([d7e4285](https://github.com/mmpro/ac-adobeio/commit/d7e4285))    
+  https://www.adobe.io/apis/creativecloud/stock/docs.html#!adobe/stock-api-docs/master/docs/api/13-license-history.md
+
+
+
 <a name="1.0.4"></a>
 ## [1.0.4](https://github.com/mmpro/ac-adobeio/compare/v1.0.3...v1.0.4) (2018-12-05 18:46)
 

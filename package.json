@@ -1,6 +1,6 @@
 {
   "name": "ac-adobeio",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "author": "Mark Poepping",
   "dependencies": {
     "jsonwebtoken": "^8.3.0",
