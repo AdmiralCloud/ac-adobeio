@@ -155,6 +155,8 @@ files:
     if (_.get(params, 'locale')) {
       queryString.push('locale]=' + _.get(params, 'locale'))
     }
+    // Enforces all results https://www.adobe.io/apis/creativecloud/stock/docs.html#!adobe/stock-api-docs/master/docs/api/13-license-history.md
+    queryString.push('all=true')
 
     requestJWT((err) => {
       if (err) return cb(err)
