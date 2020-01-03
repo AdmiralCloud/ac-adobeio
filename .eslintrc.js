@@ -1,9 +1,10 @@
-const config = {
-  "extends": "standard",
-  "plugins": [
-    "standard",
-    "promise",
-  ],
+let config = {
+  'env': {
+    'commonjs': true,
+    'es6': true,
+    'node': true
+  },
+  'extends': 'eslint:recommended',
   "rules": {
     "space-before-function-paren": 0,
     "no-extra-semi": 0,
@@ -13,11 +14,13 @@ const config = {
     "standard/no-callback-literal": 0,
     "new-cap": 0
   },
+  'parserOptions': {
+    'ecmaVersion': 2018
+  },
   globals: {
     config: true,
-    describe: true,
-    it: true
+    expect: true,
   }
-}
+};
 
 module.exports = config

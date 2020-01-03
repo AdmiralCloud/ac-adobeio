@@ -1,31 +1,28 @@
 {
   "name": "ac-adobeio",
   "version": "1.1.0",
-  "author": "Mark Poepping",
+  "author": "Mark Poepping <mark.poepping@mmpro.de> (https://www.admiralcloud.com)",
+  "contributors": [
+    "Patrick Loboda <patrick.loboda@admiralcloud.com> (https://www.admiralcloud.com)"
+  ],
+  "license": "MIT",
   "dependencies": {
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
-    "superagent": "^4.0.0-beta.5"
+    "superagent": "^5.1.3"
   },
   "devDependencies": {
     "ac-conventional-changelog-template": "git+https://github.com/mmpro/ac-conventional-changelog-template.git",
     "ac-jenkins": "git+ssh://git@ac-jenkins.github.com:mmpro/ac-jenkins",
     "corp-semantic-release": "git+https://github.com/mmpro/corp-semantic-release.git",
     "cz-customizable": "git+https://github.com/mmpro/cz-customizable.git",
-    "eslint": "^5.6.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint": "6.5.1",
     "expect": "^23.6.0",
     "husky": "^0.14.3",
     "mocha": "^5.2.0",
     "mocha-jenkins-reporter": "^0.4.0",
     "mocha-junit-reporter": "^1.18.0",
-    "mocha-multi-reporters": "^1.1.7",
-    "pretty-hrtime": "^1.0.3",
     "pretty-js": "^0.2.0"
   },
   "config": {
