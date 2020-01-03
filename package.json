@@ -18,7 +18,7 @@
     "corp-semantic-release": "git+https://github.com/mmpro/corp-semantic-release.git",
     "cz-customizable": "git+https://github.com/mmpro/cz-customizable.git",
     "eslint": "6.5.1",
-    "expect": "^23.6.0",
+    "expect": "^24.9.0",
     "husky": "^0.14.3",
     "mocha": "^5.2.0",
     "mocha-jenkins-reporter": "^0.4.0",
