@@ -7,15 +7,19 @@ lint-fix:
 lint-check:
 	./node_modules/.bin/eslint index.js test/test.js
 
-jenkins-build:
-	./jenkins-build.sh
+commit:
+	@node ./node_modules/ac-semantic-release/lib/commit.js
 
-rebase:
-	git fetch origin develop
-	git rebase origin/develop
+createpr:
+	./node_modules/ac-jenkins/bin/createpr.sh
+
+test-release:
+	DEBUGMODE=true node ./node_modules/ac-semantic-release/lib/release.js
 
 release:
-	./node_modules/corp-semantic-release/src/index.js --branch master --useTemplate "ac-conventional-changelog-template"
+	node ./node_modules/ac-semantic-release/lib/release.js
 
+cleanup:
+	./node_modules/ac-jenkins/bin/cleanup.sh
 
 .PHONY: check
